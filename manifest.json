@@ -1,0 +1,9 @@
+{
+          "name": "InfernoGameZ",
+          "short_name": "InfernoGameZ",
+          "url": "infernogamez/home.html",
+          "description": "The official InfernoGameZ website!",
+          "start_url": "/home.html",
+          "theme_color": "red",
+          "display": "standalone"
+}
