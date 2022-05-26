@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Vote | InfernoGameZ</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="icon" href="images/infernogamez.jpg">
+          <link rel="manifest" href="manifest.json">
+</head>
+<body>
+          <div class="all">
+                    <div class="navbar">
+                              <a href="home.html"><span>InfernoGameZ</span></a>
+                              <a href="latest-videos.html"><span>Latest Videos</span></a>
+                              <a href="votes.html"><span>Vote</span></a>
+                              <a href="about.html"><span>About me</span></a>
+                              <a href="blog.html"><span>Blog</span></a>
+                              <a href="contact.html"><span>Contact</span></a>
+                              <a href="https://www.youtube.com/c/InfernoGameZZ" target="_blank"><span>Youtube</span></a>
+                              <a href="https://www.youtube.com/c/InfernoGameZZ?sub_confirmation=1" target="_blank"><span>Subscribe</span></a>
+                    </div>
+                    <div class="contents">
+                              <h1>Vote</h1>
+                              <hr>
+                              <form action="https://sheetdb.io/api/v1/lzaigwatk4fku" method="post" id="sheetdb-form">
+                                        <h4>Name:</h4>
+                                        <br>
+                                        <input type="text" name="data[name]" placeholder="Name:">
+                                        <h4>Vote:</h4>
+                                        <select name="data[votes]" id="vote">
+                                                  <option value="A">Oxygen</option>
+                                                  <option value="B">Man</option>
+                                                  <option value="C">Sharpener</option>
+                                                  <option value="D">Ball</option>
+                                                  <option value="E">Fidget</option>
+                                                  <option value="F">Genstone</option>
+                                                  <option value="G">Eraser</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <button type="submit">Submit</button>
+                              </form>
+                              <h2>Thanks for voting!</h2>
+                              <a href="https://youtube.com/c/InfernoGameZZ?sub_confirmation=1"><span>Subscribe</span></a>
+                              <a href="home.html"><span>Go back home!</span></a>
+                              <script>
+                                        var form = document.getElementById('sheetdb-form');
+                                        form.addEventListener("submit", e => {
+                                          e.preventDefault();
+                                          fetch(form.action, {
+                                              method : "POST",
+                                              body: new FormData(document.getElementById("sheetdb-form")),
+                                          }).then(
+                                              response => response.json()
+                                          ).then((html) => {
+                                            // you can put any JS code here
+                                            alert('You voted!')
+                                          });
+                                        });
+                                      </script>
+                              <hr>
+                    </div>
+                    <div class="footer">
+                              <a href="home.html"><span>InfernoGameZ</span></a>
+                              <a href="latest-videos.html"><span>Latest Videos</span></a>
+                              <a href="votes.html"><span>Vote</span></a>
+                              <a href="about.html"><span>About me</span></a>
+                              <a href="blog.html"><span>Blog</span></a>
+                              <a href="contact.html"><span>Contact</span></a>
+                              <a href="https://www.youtube.com/c/InfernoGameZZ"><span>Youtube</span></a>
+                              <a href="https://www.youtube.com/c/InfernoGameZZ?sub_confirmation=1"><span>Subscribe</span></a>
+                    </div>
+          </div>
+</body>
+</html>
